@@ -2,11 +2,14 @@
 // В результаті, перетягуючи повзунок, буде змінюватися розмір тексту.
 
 
-const controlSizeText = document.querySelector('#font-size-control');
-const sizeText = document.querySelector('#text');
 
-function fontSizeControl(event) {
-  sizeText.style.fontSize = event.currentTarget.value + 'px';
-}
+const rangeInput = document.querySelector('#font-size-control');
+const onText = document.querySelector('#text');
 
-controlSizeText.addEventListener('input', fontSizeControl);
+onText.style.fontSize = rangeInput.value + 'px';
+
+const textResizing = () => {
+  onText.style.fontSize = `${rangeInput.value}px`;
+};
+
+rangeInput.addEventListener('input', textResizing);

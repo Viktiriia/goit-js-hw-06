@@ -8,11 +8,10 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
-const nameColor = document.querySelector('.color');
-const changeBtn = document.querySelector('.change-color');
-const body = document.body;
-
-const changeColor = () => {
-  nameColor.textContent = body.style.backgroundColor = getRandomHexColor();
+function changeBackgroundColor() {
+  const color = getRandomHexColor();
+  document.body.style.background = color;
+  document.querySelector('.color').textContent = color;
 }
-changeBtn.addEventListener('click', changeColor);
+const button = document.querySelector('.change-color');
+button.addEventListener('click', changeBackgroundColor);
