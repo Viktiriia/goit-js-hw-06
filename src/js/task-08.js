@@ -16,9 +16,10 @@ function onSubmit(elements) {
     } else {
         const data = {
             email: email.value,
-            password: password.value
+            password: password.value,
         }
+        console.log(data);
+     elements.currentTarget.reset();
     }
-    console.log(data)
-    elements.currentTarget.reset();
+  
 }

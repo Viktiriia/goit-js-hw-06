@@ -14,7 +14,7 @@ const inputRef = document.querySelector('#validation-input');
 inputRef.addEventListener('blur', handleBlurBorderColor);
 function handleBlurBorderColor(event) {
   const dataLength = Number(inputRef.dataset.length);
-  const valueLength = Number(inputRef.value.length);
+  const valueLength = Number(inputRef.value.trim().length);
 
   if (valueLength === dataLength) {
     inputRef.classList.add('valid');

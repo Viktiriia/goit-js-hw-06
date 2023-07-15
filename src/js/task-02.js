@@ -23,5 +23,5 @@ const itemsEl = ingredients.map((ingredient) => {
   return item;
 });
 
-ingredientsEl.prepend(...itemsEl);
+ingredientsEl.append(...itemsEl);
 
