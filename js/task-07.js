@@ -9,6 +9,7 @@ const onText = document.querySelector('#text');
 onText.style.fontSize = rangeInput.value + 'px';
 
 const textResizing = () => {
+  
   onText.style.fontSize = `${rangeInput.value}px`;
 };
 
